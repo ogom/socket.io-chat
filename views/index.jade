@@ -1,0 +1,18 @@
+html
+  head
+    script(type='text/javascript', src='http://code.jquery.com/jquery-1.6.2.min.js')
+    script(type='text/javascript', src='/socket.io/socket.io.js')
+    script(type='text/javascript', src='/javascripts/client.js')
+  body
+    h1= title
+    p Audience:
+      span#audience
+
+    form#form(onsubmit='send(); return false;')
+      input#message(type='text')
+      input(type='submit', value='send')
+    br
+
+    b Comments
+    hr
+    #list
